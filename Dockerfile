@@ -31,7 +31,8 @@ ADD jolokia /opt/jolokia/
 
 
 #install OpenJDK 1.8 / use only when getting ubi minimal image
-RUN microdnf --enablerepo=rhel-7-server-rpms install java-1.8.0-openjdk-headless \
+RUN microdnf --enablerepo=rhel-7-server-rpms \
+&& install java-1.8.0-openjdk-headless \
 && microdnf clean all \
 && echo securerandom.source=file:/dev/urandom >> /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.212.b04-0.el7_6.x86_64/jre/lib/security/java.security \
 && useradd -r jboss \
