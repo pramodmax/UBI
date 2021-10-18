@@ -1,3 +1,3 @@
 # UBI
 
-# This repo is no longer maintainer!!
+# This repo is no longer maintained !!
